@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
+    <item android:title="Thông tin" android:icon="@drawable/user"></item>
+    <item android:title="Đơn hàng mới" android:icon="@drawable/ic_shopping_bag"/>
+    <item android:title="Lịch sử đơn hàng" android:icon="@drawable/ic_history_blue"/>
+    <item android:title="Thông báo"  android:icon="@drawable/ic_notification_2"/>
+    <item android:title="Trợ giúp" android:icon="@drawable/ic_help"/>
+    <item android:title="Cài đặt" android:icon="@drawable/ic_settings"/>
+    <item android:title="Đăng xuất" android:icon="@drawable/ic_logout"/>
 </menu>
