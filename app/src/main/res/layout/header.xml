@@ -13,7 +13,7 @@
             android:layout_height="100dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:src="@drawable/daxua"
+            android:src="@drawable/lee"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="30dp"/>
         <TextView

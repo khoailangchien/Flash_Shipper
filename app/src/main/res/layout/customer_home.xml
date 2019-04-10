@@ -65,13 +65,17 @@
         </LinearLayout>
 
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@+id/cushome_upperbar"
-        android:layout_above="@+id/cushome_botbar"
-        android:background="@drawable/map">
-    </LinearLayout>
+
+        <fragment
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_below="@+id/cushome_upperbar"
+            android:layout_above="@+id/cushome_botbar"
+            android:id="@+id/fragment"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+
+
+        </fragment>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -216,14 +220,13 @@
             android:textColor="@color/grey"
             android:textSize="15dp"
             android:text="Điểm đi"/>
-        <TextView
-            android:layout_width="wrap_content"
+        <fragment
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/grey"
-            android:textSize="15dp"
-            android:text="18 Duy Tân Hà Nội"/>
+            android:id="@+id/text_diemdi"
+            android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+            android:layout_weight="5"
+            android:layout_margin="10dp" />
     </LinearLayout>
 
         <LinearLayout
@@ -246,32 +249,101 @@
                 android:layout_marginTop="10dp"
                 android:textColor="@color/grey"
                 android:textSize="15dp"
-                android:text="Điểm đi"/>
-            <TextView
-                android:layout_width="wrap_content"
+                android:text="Điểm đến"/>
+            <fragment
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
-                android:textColor="@color/grey"
-                android:textSize="15dp"
-                android:text="18 Duy Tân Hà Nội"/>
+                android:id="@+id/text_diemden"
+                android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+                android:layout_weight="5"
+                android:layout_margin="10dp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_marginLeft="20dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_distance"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:text="Khoảng cách"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/tv_distance"
+                android:text="0km"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_marginLeft="20dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_distance"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:text="Khoảng cách chim bay"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/tv_air_distance"
+                android:text="0km"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/btn_tieptuc"
             android:layout_height="40dp"
             android:layout_marginTop="10dp"
             android:orientation="horizontal"
             android:background="@color/red">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="3dp"
+                android:text="Tiếp tục"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="20dp"
-                android:textStyle="bold"
-                android:text="Tiếp tục" />
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/btn_test"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:background="@color/red">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:text="Test"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
         </LinearLayout>
     </LinearLayout>

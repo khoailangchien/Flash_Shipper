@@ -22,11 +22,13 @@
             >
             <LinearLayout
                 android:layout_width="0dp"
+                android:id="@+id/btn_back_popupDelivery"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
                 <ImageView
                     android:layout_width="25dp"
                     android:layout_height="25dp"
+
                     android:src="@drawable/ic_back"
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"/>
@@ -350,6 +352,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
+            android:id="@+id/btn_giaongay_delivery"
             android:layout_height="40dp"
             android:layout_marginVertical="2dp"
             android:layout_margin="2dp"
@@ -360,6 +363,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+
                 android:layout_marginTop="3dp"
                 android:textAlignment="center"
                 android:textColor="@color/white"
