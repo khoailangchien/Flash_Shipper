@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/greyLight">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="650dp"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_margin="5dp"
         android:background="@drawable/custom_button">
@@ -15,20 +17,19 @@
         <LinearLayout
 
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="50dp"
             android:background="@color/greyLight"
             android:textAlignment="center"
             android:weightSum="5"
             >
             <LinearLayout
                 android:layout_width="0dp"
-                android:id="@+id/btn_back_popupDelivery"
+                android:id="@+id/btn_back"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
                 <ImageView
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-
                     android:src="@drawable/ic_back"
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"/>
@@ -40,7 +41,7 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="center"
                     android:textAlignment="center"
                     android:text="Chi tiết đơn hàng"
@@ -54,9 +55,9 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="20dp"
-            android:weightSum="3"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:weightSum="5"
             android:background="@drawable/border"
             android:orientation="horizontal">
 
@@ -64,7 +65,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:layout_gravity="center"
                 android:layout_marginLeft="50dp"
                 android:textSize="15dp"
@@ -72,18 +73,19 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"
+                android:id="@+id/tv_serviceType"
+                android:layout_weight="3"
                 android:layout_gravity="center"
-
+                android:textColor="@color/darkgrey"
                 android:textSize="15dp"
-                android:text="Đồ ăn" />
+                android:text="" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:layout_marginVertical="2dp"
-            android:weightSum="3"
+            android:weightSum="5"
             android:background="@drawable/border"
 
             android:orientation="horizontal">
@@ -92,7 +94,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:layout_gravity="center"
                 android:layout_marginLeft="50dp"
                 android:textSize="15dp"
@@ -100,18 +102,19 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:id="@+id/tv_shipPrice"
                 android:layout_weight="2"
                 android:layout_gravity="center"
-
+                android:textColor="@color/darkgrey"
                 android:textSize="15dp"
-                android:text="50000" />
+                android:text="" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:layout_marginVertical="2dp"
-            android:weightSum="3"
+            android:weightSum="5"
             android:background="@drawable/border"
             android:orientation="horizontal">
 
@@ -119,7 +122,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:layout_gravity="center"
                 android:layout_marginLeft="50dp"
                 android:textSize="15dp"
@@ -127,18 +130,19 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:id="@+id/tv_codPrice"
                 android:layout_weight="2"
                 android:layout_gravity="center"
-
+                android:textColor="@color/darkgrey"
                 android:textSize="15dp"
-                android:text="300000" />
+                android:text="" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:layout_marginVertical="2dp"
-            android:weightSum="3"
+            android:weightSum="5"
             android:background="@drawable/border"
             android:orientation="horizontal">
 
@@ -146,7 +150,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:layout_gravity="center"
                 android:layout_marginLeft="50dp"
                 android:textSize="15dp"
@@ -154,18 +158,19 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:id="@+id/packageType"
                 android:layout_weight="2"
                 android:layout_gravity="center"
-
+                android:textColor="@color/darkgrey"
                 android:textSize="15dp"
-                android:text="Quần áo" />
+                android:text="" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:layout_marginVertical="2dp"
-            android:weightSum="3"
+            android:weightSum="5"
             android:background="@drawable/border"
             android:orientation="horizontal">
 
@@ -173,7 +178,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:layout_gravity="center"
                 android:layout_marginLeft="50dp"
                 android:textSize="15dp"
@@ -181,18 +186,19 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:id="@+id/tv_packageSize"
                 android:layout_weight="2"
                 android:layout_gravity="center"
-
+                android:textColor="@color/darkgrey"
                 android:textSize="15dp"
-                android:text="30cm - 50cm" />
+                android:text="" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:layout_marginVertical="2dp"
-            android:weightSum="3"
+            android:weightSum="5"
             android:background="@drawable/border"
             android:orientation="horizontal">
 
@@ -200,7 +206,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:layout_gravity="center"
                 android:layout_marginLeft="50dp"
                 android:textSize="15dp"
@@ -208,18 +214,18 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:id="@+id/packageWeight"
                 android:layout_weight="2"
                 android:layout_gravity="center"
-
+                android:textColor="@color/darkgrey"
                 android:textSize="15dp"
-                android:text="1kg" />
+                android:text="" />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:layout_marginVertical="2dp"
-            android:weightSum="3"
+            android:weightSum="5"
             android:background="@drawable/border"
             android:orientation="horizontal">
 
@@ -227,7 +233,90 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
+                android:layout_gravity="center"
+                android:layout_marginLeft="50dp"
+                android:textSize="15dp"
+                android:text="Quay lại điểm đầu" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_goBack"
+                android:layout_weight="2"
+                android:layout_gravity="center"
+                android:textColor="@color/darkgrey"
+                android:textSize="15dp"
+                android:text="" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginVertical="2dp"
+            android:weightSum="5"
+            android:background="@drawable/border"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_gravity="center"
+                android:layout_marginLeft="50dp"
+                android:textSize="15dp"
+                android:text="Giao hàng tận tay" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:id="@+id/tv_giveToReceiver"
+                android:layout_gravity="center"
+                android:textColor="@color/darkgrey"
+                android:textSize="15dp"
+                android:text="" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginVertical="2dp"
+            android:weightSum="5"
+            android:background="@drawable/border"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_gravity="center"
+                android:layout_marginLeft="50dp"
+                android:textSize="15dp"
+                android:text="Hỗ trợ tài xế" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:id="@+id/tv_supportDriver"
+                android:layout_gravity="center"
+                android:textColor="@color/darkgrey"
+                android:textSize="15dp"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+
+            android:weightSum="5"
+            android:background="@drawable/border"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
                 android:layout_gravity="center"
                 android:layout_marginLeft="50dp"
                 android:textSize="15dp"
@@ -235,19 +324,20 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:id="@+id/tv_status"
                 android:layout_weight="2"
                 android:layout_gravity="center"
-
+                android:textColor="@color/darkgrey"
                 android:textSize="15dp"
-                android:text="Đã nhận" />
+                android:text="" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:layout_marginTop="1dp"
             android:layout_marginBottom="30dp"
-            android:weightSum="3"
+            android:weightSum="5"
             android:background="@drawable/border"
             android:orientation="horizontal">
 
@@ -255,7 +345,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:layout_gravity="center"
                 android:layout_marginLeft="50dp"
                 android:textSize="15dp"
@@ -263,18 +353,19 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:id="@+id/tv_note"
                 android:layout_weight="2"
                 android:layout_gravity="center"
-
+                android:textColor="@color/darkgrey"
                 android:textSize="15dp"
-                android:text="Không" />
+                android:text="" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:layout_marginVertical="2dp"
-            android:weightSum="3"
+            android:weightSum="5"
             android:background="@drawable/border"
             android:orientation="horizontal">
 
@@ -282,7 +373,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:layout_gravity="center"
                 android:layout_marginLeft="50dp"
                 android:textSize="15dp"
@@ -291,16 +382,17 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
+                android:id="@+id/tv_startLoca"
                 android:layout_gravity="center"
-
+                android:textColor="@color/darkgrey"
                 android:textSize="15dp"
-                android:text="80 Cầu Giầy Hà Nội" />
+                android:text="" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:layout_marginVertical="2dp"
-            android:weightSum="3"
+            android:weightSum="5"
             android:background="@drawable/border"
             android:orientation="horizontal">
 
@@ -308,7 +400,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:layout_gravity="center"
                 android:layout_marginLeft="50dp"
                 android:textSize="15dp"
@@ -317,17 +409,18 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
+                android:id="@+id/tv_endLoca"
                 android:layout_gravity="center"
-
+                android:textColor="@color/darkgrey"
                 android:textSize="15dp"
-                android:text="18 Duy Tân Hà Nội" />
+                android:text="" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:layout_marginVertical="2dp"
-            android:weightSum="3"
+            android:weightSum="5"
             android:background="@drawable/border"
             android:orientation="horizontal">
 
@@ -335,7 +428,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:layout_gravity="center"
                 android:layout_marginLeft="50dp"
                 android:textSize="15dp"
@@ -344,18 +437,18 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
+                android:id="@+id/tv_distance"
                 android:layout_gravity="center"
-
+                android:textColor="@color/darkgrey"
                 android:textSize="15dp"
-                android:text="5km" />
+                android:text="" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:id="@+id/btn_giaongay_delivery"
+            android:id="@+id/btn_deliver"
             android:layout_height="40dp"
-            android:layout_marginVertical="2dp"
-            android:layout_margin="2dp"
+            android:layout_marginTop="30dp"
             android:orientation="horizontal"
             android:background="@color/red">
 
@@ -363,13 +456,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-
                 android:layout_marginTop="3dp"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="20dp"
                 android:textStyle="bold"
-
                 android:text="Giao ngay" />
 
         </LinearLayout>

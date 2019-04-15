@@ -7,8 +7,10 @@
     <color name="colorBtnNhanGiao">#FF8230</color>
     <color name="colorOrder">#FFFFFF</color>
     <color name="red">#FC4D17</color>
-    <color name="greyLight">#F7F5F5</color>
+    <color name="greyLight">#F0ECEC</color>
     <color name="grey">#A29999</color>
+    <color name="darkgrey">#5F5959</color>
     <color name="white">#FDFCFC</color>
     <color name="blue">#04DEE6</color>
+    <color name="lightblue">#16EBF5</color>
 </resources>

@@ -46,13 +46,28 @@ public class OrderListAdapter extends BaseAdapter {
         TextView tvKhoangcach = view.findViewById(R.id.order_item_khoangcach);
         TextView tvDiemdi = view.findViewById(R.id.order_item_diemdi);
         TextView tvDiemđen = view.findViewById(R.id.order_item_diemden);
+        TextView status = view.findViewById(R.id.order_item_status);
 
         tvLoaixe.setText(orderDemoList.get(position).getLoaixe());
-        tvGia.setText(String.valueOf(orderDemoList.get(position).getGia()));
+        tvGia.setText(String.valueOf(orderDemoList.get(position).getPhiship()));
         tvKhoangcach.setText(String.valueOf(orderDemoList.get(position).getKhoangcach()));
         tvDiemdi.setText(orderDemoList.get(position).getDiemdi());
         tvDiemđen.setText(orderDemoList.get(position).getDiemden());
-
+        if(orderDemoList.get(position).getStatus() == 0) {
+            status.setText("Đang chờ");
+        }
+        if(orderDemoList.get(position).getStatus() == 1) {
+            status.setText("Chờ lấy hàng");
+        }
+        if(orderDemoList.get(position).getStatus() == 2) {
+            status.setText("Đang giao");
+        }
+        if(orderDemoList.get(position).getStatus() == 3) {
+            status.setText("Đã hoàn thành");
+        }
+        if(orderDemoList.get(position).getStatus() == 3) {
+            status.setText("Đã hủy");
+        }
         return view;
 
     }
