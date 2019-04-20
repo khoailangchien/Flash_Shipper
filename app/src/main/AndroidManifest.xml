@@ -17,7 +17,7 @@
         <activity android:name=".Search_demo">
 
         </activity>
-        <activity android:name=".Shipper_TakenOrder" />
+        <activity android:name=".Shipper_TakeOrder" />
         <activity android:name=".Shipper_DeliveryOrder" />
 
         <meta-data

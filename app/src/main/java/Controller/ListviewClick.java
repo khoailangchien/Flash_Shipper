@@ -1,8 +1,13 @@
-package Adapter;
+package Controller;
+
 
 import android.app.Dialog;
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.shipper.R;
 
@@ -10,16 +15,15 @@ import java.util.List;
 
 import Enity.order_Demo;
 
-public class popUpAdapter extends AppCompatActivity {
+
+public class ListviewClick extends AppCompatActivity {
     Dialog myDialog;
-    List<order_Demo> takenList;
+    private List<order_Demo> takenList;
 
-    public void setDataPopup(int position, List<order_Demo> order_demoList, Dialog dialog) {
-
+    public void onClickListview(Dialog dialog, List<order_Demo> list, int position, String popup, Context context) {
         myDialog = dialog;
-        takenList = order_demoList;
+        takenList = list;
 
-        //TextView tvLoaixe = myDialog.findViewById(R.id.order_item_loaixe);
         TextView tvDichvu = myDialog.findViewById(R.id.tv_serviceType);
         TextView tvPhiship = myDialog.findViewById(R.id.tv_shipPrice);
         TextView tvPhithuho = myDialog.findViewById(R.id.tv_codPrice);
@@ -42,6 +46,7 @@ public class popUpAdapter extends AppCompatActivity {
         tvPhiship.setText(String.valueOf(takenList.get(position).getPhiship()));
         tvPhithuho.setText(String.valueOf(takenList.get(position).getPhithuho()));
         tvLoaihang.setText(takenList.get(position).getLoaihang());
+        //tvLoaihang.setText("");
         tvKichthuoc.setText(String.valueOf(takenList.get(position).getKichthuoc1())+" - "+String.valueOf(takenList.get(position).getKichthuoc2()));
         tvCannang.setText(String.valueOf(takenList.get(position).getCannang()));
         note.setText(takenList.get(position).getNote());
@@ -82,7 +87,52 @@ public class popUpAdapter extends AppCompatActivity {
         if(takenList.get(position).getStatus() == 3) {
             status.setText("Đã hủy");
         }
+
+
         myDialog.show();
 
+        LinearLayout back = myDialog.findViewById(R.id.btn_back);
+        popupBackOnClick(back);
+        if(popup.toLowerCase().equals("nhandon")) {
+            LinearLayout nhangiao = myDialog.findViewById(R.id.btn_take);
+            popUpButtonOnclick(nhangiao, context);
+
+        } else if(popup.toLowerCase().equals("giaodon")){
+            LinearLayout giaongay = myDialog.findViewById(R.id.btn_deliver);
+            popUpButtonOnclick(giaongay, context);
+
+        } else if(popup.toLowerCase().equals("hoanthanh")) {
+            LinearLayout hoanthanh = myDialog.findViewById(R.id.btn_finish);
+            popUpButtonOnclick(hoanthanh, context);
+        }
+
     }
+
+    public void popupBackOnClick(LinearLayout button) {
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myDialog.dismiss();
+            }
+        });
+//        giaongay.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(getApplicationContext(), "Nhan don thanh cong", Toast.LENGTH_SHORT).show();
+//                myDialog.dismiss();
+//            }
+//        });
+    }
+
+    public void popUpButtonOnclick(LinearLayout button, final Context context) {
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, "Dang giao don hang", Toast.LENGTH_SHORT).show();
+                myDialog.dismiss();
+            }
+        });
+    }
+
 }

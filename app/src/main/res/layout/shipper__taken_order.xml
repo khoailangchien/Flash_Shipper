@@ -21,7 +21,7 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:id="@+id/btn_back_takenOrder"
+                android:id="@+id/btn_back"
                 android:layout_weight="1">
                 <ImageView
                     android:layout_width="25dp"
@@ -125,7 +125,7 @@
         <ListView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/shipper_taken_listView"
+            android:id="@+id/listView"
             android:layout_below="@+id/uppermenu"
             android:layout_above="@+id/lowermenu"
             android:layout_marginVertical="5dp"
@@ -148,7 +148,7 @@
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
             android:layout_weight="1"
-            android:id="@+id/btn_shipper_home2"
+            android:id="@+id/btn_shipper_home"
             android:orientation="vertical">
 
             <ImageView
@@ -170,7 +170,7 @@
 
         <LinearLayout
             android:layout_width="0dp"
-            android:id="@+id/btn_shipper_takenOrder2"
+            android:id="@+id/btn_shipper_takenOrder"
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
             android:layout_weight="1"
@@ -196,7 +196,7 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:id="@+id/btn_deliveringOrder2"
+            android:id="@+id/btn_deliveringOrder"
             android:layout_marginTop="10dp"
             android:layout_weight="1"
             android:orientation="vertical">
@@ -219,7 +219,7 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:id="@+id/btn_shipper_history2"
+            android:id="@+id/btn_shipper_history"
             android:layout_marginTop="10dp"
             android:layout_weight="1"
             android:orientation="vertical">
@@ -243,7 +243,7 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:id="@+id/btn_shipper_profile2"
+            android:id="@+id/btn_shipper_profile"
             android:layout_marginTop="10dp"
             android:layout_weight="1"
             android:orientation="vertical">

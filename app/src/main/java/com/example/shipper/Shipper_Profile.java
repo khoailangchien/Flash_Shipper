@@ -33,7 +33,7 @@ public class Shipper_Profile extends AppCompatActivity implements View.OnClickLi
 //        Intent intent;
 //        switch (v.getId()) {
 //            case R.id.btn_shipper_takenOrder:
-//                intent = new Intent(Shipper_Profile.this, Shipper_TakenOrder.class);
+//                intent = new Intent(Shipper_Profile.this, Shipper_TakeOrder.class);
 //                startActivity(intent);
 //                break;
 //            case R.id.btn_deliveringOrder:

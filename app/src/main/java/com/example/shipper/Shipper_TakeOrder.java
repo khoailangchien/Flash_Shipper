@@ -24,7 +24,7 @@ import Adapter.Popup_setup;
 import Controller.ListviewClick;
 import Enity.order_Demo;
 
-public class Shipper_DeliveryOrder extends AppCompatActivity implements View.OnClickListener {
+public class Shipper_TakeOrder extends AppCompatActivity implements View.OnClickListener {
 
     Dialog myDialog;
 
@@ -32,6 +32,7 @@ public class Shipper_DeliveryOrder extends AppCompatActivity implements View.OnC
 
     private ListView listView;
     private OrderListAdapter orderListAdapter;
+    //private PopUpAdapter popUpAdapter;
     private ListviewClick listviewClick;
     private List<order_Demo> orderDemoList;
     private List<order_Demo> takenList;
@@ -39,7 +40,7 @@ public class Shipper_DeliveryOrder extends AppCompatActivity implements View.OnC
     private MaterialSearchView materialSearchView;
 
     private LinearLayout btn_home;
-    private LinearLayout btn_takenOrder;
+    private LinearLayout btn_deliveringOrder;
     private LinearLayout btn_shipperHistory;
     private LinearLayout btn_shipperProfile;
     private LinearLayout btnBAck;
@@ -48,8 +49,9 @@ public class Shipper_DeliveryOrder extends AppCompatActivity implements View.OnC
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_shipper__delivery_order);
+        setContentView(R.layout.shipper__taken_order);
 
+        //popUpAdapter = new PopUpAdapter();
         listviewClick = new ListviewClick();
         popupSetup = new Popup_setup();
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -59,7 +61,7 @@ public class Shipper_DeliveryOrder extends AppCompatActivity implements View.OnC
         materialSearchView = findViewById(R.id.search_view);
 
         btn_home = findViewById(R.id.btn_shipper_home);
-        btn_takenOrder = findViewById(R.id.btn_shipper_takenOrder);
+        btn_deliveringOrder = findViewById(R.id.btn_deliveringOrder);
         btn_shipperHistory = findViewById(R.id.btn_shipper_history);
         btn_shipperProfile = findViewById(R.id.btn_shipper_profile);
         btnBAck = findViewById(R.id.btn_back);
@@ -86,11 +88,12 @@ public class Shipper_DeliveryOrder extends AppCompatActivity implements View.OnC
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                myDialog = popupSetup.set(myDialog, R.layout.shipper_popup_finishorder);
-                myDialog.setContentView(R.layout.shipper_popup_finishorder);
+                myDialog = popupSetup.set(myDialog, R.layout.shipper_popup_delivery);
+                myDialog.setContentView(R.layout.shipper_popup_delivery);
                 //myDialog.show();
                 //popUpAdapter.setDataPopup(position, takenList, myDialog);
-                listviewClick.onClickListview(myDialog, takenList, position, "hoanthanh", getApplicationContext());
+                //listItemClick(position);
+                listviewClick.onClickListview(myDialog, takenList, position, "giaodon", getApplicationContext());
             }
         });
 
@@ -98,11 +101,11 @@ public class Shipper_DeliveryOrder extends AppCompatActivity implements View.OnC
         search();
         btnBAck.setOnClickListener(this);
         btn_home.setOnClickListener(this);
-        btn_takenOrder.setOnClickListener(this);
+        btn_deliveringOrder.setOnClickListener(this);
         btn_shipperHistory.setOnClickListener(this);
         btn_shipperProfile.setOnClickListener(this);
     }
-    
+
 
     @Override
     public void onClick(View v) {
@@ -111,23 +114,23 @@ public class Shipper_DeliveryOrder extends AppCompatActivity implements View.OnC
         Intent intent;
         switch (v.getId()) {
             case R.id.btn_shipper_home:
-                intent = new Intent(Shipper_DeliveryOrder.this, Shipper_home.class);
+                intent = new Intent(Shipper_TakeOrder.this, Shipper_home.class);
                 startActivity(intent);
                 break;
-            case R.id.btn_shipper_takenOrder:
-                intent = new Intent(Shipper_DeliveryOrder.this, Shipper_TakeOrder.class);
+            case R.id.btn_deliveringOrder:
+                intent = new Intent(Shipper_TakeOrder.this, Shipper_DeliveryOrder.class);
                 startActivity(intent);
                 break;
             case R.id.btn_shipper_history:
-                intent = new Intent(Shipper_DeliveryOrder.this, Shipper_History.class);
+                intent = new Intent(Shipper_TakeOrder.this, Shipper_History.class);
                 startActivity(intent);
                 break;
             case R.id.btn_shipper_profile:
-                intent = new Intent(Shipper_DeliveryOrder.this, Shipper_Profile.class);
+                intent = new Intent(Shipper_TakeOrder.this, Shipper_Profile.class);
                 startActivity(intent);
                 break;
             case R.id.btn_back:
-                intent = new Intent(Shipper_DeliveryOrder.this, Shipper_home.class);
+                intent = new Intent(Shipper_TakeOrder.this, Shipper_home.class);
                 startActivity(intent);
                 break;
             case  R.id.search_view:
@@ -158,7 +161,7 @@ public class Shipper_DeliveryOrder extends AppCompatActivity implements View.OnC
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Hoan thanh don hang", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Dang giao don hang", Toast.LENGTH_SHORT).show();
                 myDialog.dismiss();
             }
         });

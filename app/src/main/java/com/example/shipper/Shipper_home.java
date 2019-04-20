@@ -16,7 +16,7 @@ import java.util.List;
 
 import Adapter.OrderListAdapter;
 import Adapter.Popup_setup;
-import Adapter.popUpAdapter;
+import Adapter.PopUpAdapter;
 import Enity.order_Demo;
 
 public class Shipper_home extends AppCompatActivity implements View.OnClickListener {
@@ -25,7 +25,7 @@ public class Shipper_home extends AppCompatActivity implements View.OnClickListe
 
     private ListView listView;
     private OrderListAdapter orderListAdapter;
-    private popUpAdapter popUpAdapter;
+    private PopUpAdapter popUpAdapter;
     private List<order_Demo> orderDemoList;
     private List<order_Demo> takenList;
     private Popup_setup popupSetup;
@@ -50,7 +50,7 @@ public class Shipper_home extends AppCompatActivity implements View.OnClickListe
         btn_shipperProfile = findViewById(R.id.btn_shipper_profile);
         listView = findViewById(R.id.shipper_listview);
 
-        popUpAdapter = new popUpAdapter();
+        popUpAdapter = new PopUpAdapter();
         orderDemoList = new ArrayList<>();
         myDialog = new Dialog(this);
 
@@ -78,7 +78,7 @@ public class Shipper_home extends AppCompatActivity implements View.OnClickListe
                 myDialog = popupSetup.set(myDialog, R.layout.shipper_popup_takeorder);
                 myDialog.setContentView(R.layout.shipper_popup_takeorder);
                 popUpAdapter.setDataPopup(position, takenList, myDialog);
-                //listItemClick(position);
+                listItemClick(position);
 
             }
         });
@@ -166,7 +166,6 @@ public class Shipper_home extends AppCompatActivity implements View.OnClickListe
     }
 
     public void btnBackClick(LinearLayout button) {
-
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -185,7 +184,6 @@ public class Shipper_home extends AppCompatActivity implements View.OnClickListe
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Toast.makeText(getApplicationContext(), "Nhan giao thanh cong", Toast.LENGTH_SHORT).show();
                 myDialog.dismiss();
             }
@@ -198,7 +196,7 @@ public class Shipper_home extends AppCompatActivity implements View.OnClickListe
         Intent intent;
         switch (v.getId()) {
             case R.id.btn_shipper_takenOrder:
-                intent = new Intent(this, Shipper_TakenOrder.class);
+                intent = new Intent(this, Shipper_TakeOrder.class);
                 startActivity(intent);
                 break;
             case R.id.btn_deliveringOrder:
